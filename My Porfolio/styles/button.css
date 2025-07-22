@@ -1,0 +1,68 @@
+.menu-toggle {
+  display: none;
+}
+
+.menu-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+} 
+.menu-btn {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+.btn{
+    padding: 12px 18px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.btn-1 {
+  background-color: black;
+  border: 2px solid transparent;
+  color: #fff;
+}
+
+.btn-1:hover {
+  background-color: white;
+  border: 2px solid black;
+  color: black;
+}
+
+.btn-2{
+  background-color: rgba(0, 102, 139);
+  border: 2px solid black;
+  color: white;
+}
+
+
+.btn-2:hover {
+  background-color: white;
+  color: rgb(0, 102, 139);
+}
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .menu-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    gap: 10px;
+    width: 200px;
+    padding: 20px;
+    display: none;
+  }
+
+  .menu-toggle:checked ~ .menu-links {
+    display: flex;
+  }
+}
